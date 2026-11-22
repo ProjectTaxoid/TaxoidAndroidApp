@@ -5,7 +5,7 @@ import models.verifyEmail.VerifyEmailReceiveModel
 import models.verifyEmail.VerifyEmailRespondModel
 
 interface AuthRepository {
-    fun verifyEmail(verifyEmailRespondModel: VerifyEmailRespondModel): ApiModel<VerifyEmailReceiveModel>
-    fun sendOneTimePassword(sendOneTimePasswordRespondModel: SendOneTimePasswordRespondModel):
+    suspend fun verifyEmail(verifyEmailRespondModel: VerifyEmailRespondModel): ApiModel<VerifyEmailReceiveModel>
+    suspend fun sendOneTimePassword(sendOneTimePasswordRespondModel: SendOneTimePasswordRespondModel):
             ApiModel<SendOneTimePasswordReceiveModel>
 }

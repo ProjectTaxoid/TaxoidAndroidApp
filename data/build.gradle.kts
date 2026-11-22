@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.4.0"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 dependencies {
@@ -7,4 +7,5 @@ dependencies {
     implementation(ktorLibs.client.core)
     implementation(ktorLibs.client.cio)
     implementation(libs.logback.classic)
+    implementation(libs.kotlin.serialization)
 }
